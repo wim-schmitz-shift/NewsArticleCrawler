@@ -14,7 +14,7 @@
       "lossDate": {
         "title": "Date",
         "type": "string",
-        "descrition": "Date of the event (Format: 'DD-mm-yyy')",
+        "description": "Date of the event (Format: 'DD-mm-yyy')",
         "prefill": "01-01-1990",
         "editor": "textfield"
       },      
