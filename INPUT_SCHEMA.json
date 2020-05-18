@@ -1,14 +1,55 @@
 {
-  "title": "Input schema for the apify/quick-start actor.",
+  "title": "News Article Crawler",
+  "description": "Specify keywords, location and date, get articles regarding the specific event",
   "type": "object",
   "schemaVersion": 1,
   "properties": {
-    "message": {
-      "title": "Message",
-      "type": "string",
-      "description": "Just enter your hello world message.",
-      "editor": "textfield"
-    }
-  },
-  "required": []
+      "searchQuery": {
+          "title": "Search Query",
+          "type": "string",
+          "description": "Keyword for the query this will also deterimine the search language.",
+          "prefill": ["fire"],
+          "editor": "textfield"
+      },
+      "lossDate": {
+        "title": "Date",
+        "type": "string",
+        "descrition": "Date of the event (Format: 'DD-mm-yyy')",
+        "prefill": "01-01-1990",
+        "editor": "textfield"
+      },      
+      "country": {
+        "title": "Country",
+        "type": "string",
+        "description": "Country of the event.",
+        "editor": "select",
+        "default": "fr",
+        "enum": ["fr", "us", "de", "be", "es"],
+        "enumTitles": ["France", "USA", "Germany", "Belgium", "Spain"]
+      },
+      "location": {
+        "title": "Location",
+        "type": "string",
+        "descrition": "More specific location of the event",
+        "editor": "textfield"
+      },
+      "numberOfArticles": {
+        "title": "Number of articles",
+        "type": "integer",
+        "description": "Max number of articles returned",
+        "default": 1,
+        "prefill": 1,
+        "maximum": 5,
+        "editor": "number"
+      },
+      "returnArticleTags": {
+        "title": "return summary",
+        "type": "boolean",
+        "description": "If checked, the actor returns article summaries instead of the full texts.",
+        "default": false, 
+        "groupCaption": "Options",
+        "groupDescription": "Various options for this actor"
+      }, 
+    },
+  "required": ["searchQuery", "lossDate", "country"]
 }
