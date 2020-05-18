@@ -30,7 +30,7 @@
       "location": {
         "title": "Location",
         "type": "string",
-        "descrition": "More specific location of the event",
+        "description": "More specific location of the event",
         "editor": "textfield"
       },
       "numberOfArticles": {
