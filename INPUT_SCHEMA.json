@@ -8,7 +8,7 @@
           "title": "Search Query",
           "type": "string",
           "description": "Keyword for the query this will also deterimine the search language.",
-          "prefill": ["fire"],
+          "prefill": "fire",
           "editor": "textfield"
       },
       "lossDate": {
